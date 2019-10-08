@@ -22,7 +22,7 @@ object PreParserETL {
     preParsedLogDS
       .repartition(numPartitions)
       .write
-      .mode(SaveMode.Append)
+      .mode(SaveMode.Overwrite)
       .partitionBy("year", "month", "day")
       .saveAsTable("rawdata.web");
 
