@@ -11,6 +11,7 @@
     <modules>
         <module>preparser-weblog</module>
         <module>preparser-etl</module>
+        <module>parser-weblog</module>
     </modules>
 
 
