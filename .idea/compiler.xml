@@ -15,6 +15,7 @@
     <bytecodeTargetLevel>
       <module name="backend" target="1.5" />
       <module name="frontend" target="1.5" />
+      <module name="parser-iplocation" target="1.8" />
       <module name="parser-weblog" target="1.8" />
       <module name="preparser-etl" target="1.5" />
       <module name="preparser-weblog" target="1.5" />
