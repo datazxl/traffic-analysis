@@ -78,12 +78,16 @@ public class UrlParseUtils {
             }
             return  new UrlInfo(trimedUrl, scheme, hostport, path, query, fragment);
         } catch (URISyntaxException e) { //3.使用字符串截取的方式解析非标准的URI
-            e.printStackTrace();
-            //判断有无query参数
-            if (firstQuestionMarkIndex == -1){ //没有query参数
-                return parseUrlWithoutQuery(trimedUrl, firstPoundMarkIndex);
-            } else {//含有query参数
-                return parseUrlWithQuery(trimedUrl, firstQuestionMarkIndex, firstPoundMarkIndex);
+            try {
+                //判断有无query参数
+                if (firstQuestionMarkIndex == -1){ //没有query参数
+                    return parseUrlWithoutQuery(trimedUrl, firstPoundMarkIndex);
+                } else {//含有query参数
+                    return parseUrlWithQuery(trimedUrl, firstQuestionMarkIndex, firstPoundMarkIndex);
+                }
+            } catch (Exception e2){
+                e2.printStackTrace();
+                return new UrlInfo("-", "-", "-", "-", "-", "-");
             }
         }
     }

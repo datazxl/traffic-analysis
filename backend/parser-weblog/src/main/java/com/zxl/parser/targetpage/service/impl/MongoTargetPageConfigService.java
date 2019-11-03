@@ -36,7 +36,7 @@ public class MongoTargetPageConfigService implements TargetPageConfigService{
      */
     public List<TargetPage> getMatchedTargetPages(int profileId, String pvUrl) {
         List<TargetPage> targetPages = profileId2TargetPages.getOrDefault(profileId, new ArrayList<TargetPage>());
-        ArrayList<TargetPage> matchedTargetPages = new ArrayList<>();
+        List<TargetPage> matchedTargetPages = new ArrayList<>();
 
         // 如果目标页面和来源url匹配的上，就将该目标页面TargetPage放入list
         for (TargetPage targetPage : targetPages) {

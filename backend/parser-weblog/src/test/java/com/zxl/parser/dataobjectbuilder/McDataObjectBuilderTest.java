@@ -32,7 +32,7 @@ public class McDataObjectBuilderTest {
 
         PreParsedLog preParsedLog = PreParserWebLog.parse(weblog);
 
-        List<BaseDataObject> baseDataObjects = new EvDataObjectBuilder().doBuildDataObjects(preParsedLog);
+        List<BaseDataObject> baseDataObjects = new McDataObjectBuilder().doBuildDataObjects(preParsedLog);
         Assert.assertEquals(1, baseDataObjects.size());
         McDataObject dataObject = (McDataObject) baseDataObjects.get(0);
         //通用字段

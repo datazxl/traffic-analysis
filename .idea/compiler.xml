@@ -10,6 +10,7 @@
         <module name="parser-weblog" />
         <module name="preparser-etl" />
         <module name="preparser-weblog" />
+        <module name="session-incision-etl" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -17,8 +18,11 @@
       <module name="frontend" target="1.5" />
       <module name="parser-iplocation" target="1.8" />
       <module name="parser-weblog" target="1.8" />
-      <module name="preparser-etl" target="1.5" />
+      <module name="preparser-etl" target="1.8" />
       <module name="preparser-weblog" target="1.5" />
+      <module name="Project" target="1.5" />
+      <module name="project" target="1.5" />
+      <module name="session-incision-etl" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

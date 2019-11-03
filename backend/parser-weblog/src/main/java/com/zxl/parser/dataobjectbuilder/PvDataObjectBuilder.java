@@ -101,7 +101,7 @@ public class PvDataObjectBuilder extends AbstractDataObjectBuilder {
             referrerInfo.setQuery("-");
             referrerInfo.setUrlWithoutQuery("-");
             referrerInfo.setKeyword("-");
-        } else {
+        } else { // 如果有gsref，那么计算该pv的来源。
             UrlInfo urlInfo = getInfoFromUrl(referUrl);
             referrerInfo.setDomain(urlInfo.getDomain());
             referrerInfo.setUrl(urlInfo.getFullUrl());
@@ -121,6 +121,8 @@ public class PvDataObjectBuilder extends AbstractDataObjectBuilder {
                 if (searchEngineConfig.getSearchKeywordKey() != null && !"null".equals(searchEngineConfig.getSearchKeywordKey())) {
                     String keyword = referParams.getOrDefault(searchEngineConfig.getSearchKeywordKey(), "-");
                     referrerInfo.setKeyword(keyword);
+                } else {
+                    referrerInfo.setKeyword("-");
                 }
             } else {
                 referrerInfo.setSearchEngineName("-");

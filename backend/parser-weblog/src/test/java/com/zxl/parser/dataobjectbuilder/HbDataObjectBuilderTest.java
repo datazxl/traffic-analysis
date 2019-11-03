@@ -19,7 +19,7 @@ public class HbDataObjectBuilderTest {
                 "&gsst=0&gswh=759 80 - 58.210.35.226 " +
                 "Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/67.0.3396.87+Safari/537.36";
         PreParsedLog preParsedLog = PreParserWebLog.parse(weblog);
-        List<BaseDataObject> baseDataObjects = new EvDataObjectBuilder().doBuildDataObjects(preParsedLog);
+        List<BaseDataObject> baseDataObjects = new HbDataObjectBuilder().doBuildDataObjects(preParsedLog);
         Assert.assertEquals(1, baseDataObjects.size());
         HbDataObject hbDataObject = (HbDataObject) baseDataObjects.get(0);
         Assert.assertEquals(2, hbDataObject.getLoadingDuration());

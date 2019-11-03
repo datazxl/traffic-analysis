@@ -28,6 +28,14 @@ public class BaseDataObject implements ParsedDataObject {
     private String clientIp;//客户端ip
     private IpLocation ipLocation; //客户端地址位置
 
+    public Calendar getCalendar() {
+        return calendar;
+    }
+
+    public void setCalendar(Calendar calendar) {
+        this.calendar = calendar;
+    }
+
     public IpLocation getIpLocation() {
         return ipLocation;
     }
@@ -98,6 +106,11 @@ public class BaseDataObject implements ParsedDataObject {
             e.printStackTrace();
         }
     }
+
+    public Date getServerTime() {
+        return serverTime;
+    }
+
     public int getHourOfDay() {
         return calendar.get(Calendar.HOUR_OF_DAY);
     }

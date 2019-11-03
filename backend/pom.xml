@@ -12,7 +12,7 @@
         <module>preparser-weblog</module>
         <module>preparser-etl</module>
         <module>parser-weblog</module>
-        <module>parser-iplocation</module>
+        <module>session-incision-etl</module>
     </modules>
 
 

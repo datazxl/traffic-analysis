@@ -10,13 +10,13 @@ public class PvDataObject extends BaseDataObject {
     private ReferrerInfo referrerInfo;//来源信息
     private BrowserInfo browserInfo;//浏览器信息
     private AdInfo adInfo;//广告信息
-    private int duration;// 当前页面的停留时间，单位为s
+    private int duration;//当前页面的停留时间，单位为s
 
     /**
-     * 判断当前PV是不是重要入口（广告进来的）
+     * 判断当前PV是不是广告进来的
      * @return
      */
-    public boolean isMandatoryEntrance(){
+    public boolean isPaid(){
         return adInfo.isPaid();
     }
     /**

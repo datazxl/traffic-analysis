@@ -17,7 +17,7 @@ public class MongoTargetPageConfigLoader implements TargetPageConfigLoader {
 
     public MongoTargetPageConfigLoader(){
         //1.获取连接
-        String mongoAddr = System.getProperty("spark.web.metadata.mongodbAddr", "localhost");
+        String mongoAddr = System.getProperty("web.metadata.mongodbAddr", "192.168.2.109");
         MongoClient client = new MongoClient(mongoAddr);
         MongoDatabase database = client.getDatabase("web-analysis");
         database.getCollection("TargetPage").find().forEach(new Consumer<Document>() {
